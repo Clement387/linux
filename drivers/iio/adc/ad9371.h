@@ -125,7 +125,7 @@ enum ad937x_device_id {
 
 #define AD937x_PARTID(phy) ((int)(spi_get_device_id(phy->spi)->driver_data >> 8))
 #define AD937x_PRODID(phy) ((int)(spi_get_device_id(phy->spi)->driver_data & 0xFF))
-#define IS_AD9375(phy)	(spi_get_device_id(phy->spi)->driver_data == ID_AD9375)
+#define IS_AD9375(phy)	(spi_get_device_id(phy->spi)->driver_data == ID_AD9375 || ID_AD9375_1)
 
 enum ad9371_sysref_req_mode {
 	SYSREF_CONT_ON,
