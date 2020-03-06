@@ -7,7 +7,7 @@
  */
 //#define DEBUG
 //#define _DEBUG
-// DPD test9@01151500
+// DPD test12@03061125 for 2-stage PA
 #include <linux/module.h>
 #include <linux/device.h>
 #include <linux/kernel.h>
@@ -4235,7 +4235,8 @@ static int ad9371_clk_register(struct ad9371_rf_phy *phy,
 static int ad9371_probe(struct spi_device *spi)
 {
 	printk(KERN_INFO "==============================\n");
-	printk(KERN_INFO "===== DPD test11@02181150 ====\n");
+	printk(KERN_INFO "===== DPD test12@03061125 ====\n");
+	printk(KERN_INFO "======= for 2-stage PA =======\n");
 	printk(KERN_INFO "==============================\n");
 	struct iio_dev *indio_dev;
 	struct ad9371_rf_phy *phy;
