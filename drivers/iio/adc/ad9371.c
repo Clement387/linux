@@ -3380,8 +3380,8 @@ printk(KERN_INFO "===> L3000: PAR STA");
 	AD9371_OF_PROP("adi,tx-settings-tx2-atten_mdb", &phy->mykDevice->tx->tx2Atten_mdB, 20000);
 
 	if (IS_AD9375(phy)) {
-		AD9371_OF_PROP("adi,dpd-damping", &phy->mykDevice->tx->dpdConfig->damping, 12);
-		AD9371_OF_PROP("adi,dpd-num-weights", &phy->mykDevice->tx->dpdConfig->numWeights, 1);
+		AD9371_OF_PROP("adi,dpd-damping", &phy->mykDevice->tx->dpdConfig->damping, 5);  // 12 for 3-stage PA, 5 for 2-stage PA
+		AD9371_OF_PROP("adi,dpd-num-weights", &phy->mykDevice->tx->dpdConfig->numWeights, 3);  // 1 for 3-stage PA, 3 for 2-stage PA
 		AD9371_OF_PROP("adi,dpd-model-version", &phy->mykDevice->tx->dpdConfig->modelVersion, 1);
 		AD9371_OF_PROP("adi,dpd-high-power-model-update", &phy->mykDevice->tx->dpdConfig->highPowerModelUpdate, 1);
 		AD9371_OF_PROP("adi,dpd-model-prior-weight", &phy->mykDevice->tx->dpdConfig->modelPriorWeight, 20);
